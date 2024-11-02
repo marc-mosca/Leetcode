@@ -11,20 +11,23 @@
  */
 const isCircularSentence = function (sentence) {
     const words = sentence.split(' ');
-    const wordsLength = words.length
 
-    if (words[0].charAt(0) !== words[wordsLength - 1].charAt(words[wordsLength - 1].length - 1)) {
+    // Check if the first letter of the sentence is equal to the last letter.
+    if (words[0].at(0) !== words[words.length - 1].at(-1)) {
         return false;
     }
 
-    if (wordsLength === 1) {
-        return words[0].charAt(words[0].length - 1) === words[wordsLength - 1].charAt(words[wordsLength - 1].length - 1);
+    // If the sentence contains only one word, check if the first letter of the word is equal to the last letter.
+    if (words.length === 1) {
+        return words[0].at(-1) === words[words.length - 1].at(-1);
     }
 
+    // Check for every word in the sentence.
     for (let i = 0; i < words.length - 1; i++) {
-        if (words[i + 1].charAt(0) !== words[i].charAt(words[i].length - 1)) {
+        if (words[i].at(-1) !== words[i + 1].at(0)) {
             return false;
         }
     }
+
     return true;
 };
