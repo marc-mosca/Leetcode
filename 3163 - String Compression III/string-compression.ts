@@ -5,15 +5,11 @@
 //  Created by Marc MOSCA on 04/11/2024.
 //
 
-/**
- * @param {string} word
- * @return {string}
- */
-const compressedString = function (word) {
-    let comp = "";
-    let counter = 1;
+function compressedString(word: string): string {
+    let comp: string = "";
+    let counter: number = 1;
 
-    for (let i = 0; i < word.length; i++) {
+    for (let i: number = 0; i < word.length; i++) {
         if (counter < 9 && word[i] === word[i + 1]) {
             counter += 1;
         }
@@ -25,4 +21,4 @@ const compressedString = function (word) {
     }
 
     return comp;
-};
+}
