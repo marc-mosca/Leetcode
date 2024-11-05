@@ -1,5 +1,5 @@
 //
-//  circular-sentence.js
+//  circular-sentence.ts
 //  Leetcode
 //
 //  Created by Marc MOSCA on 02/11/2024.

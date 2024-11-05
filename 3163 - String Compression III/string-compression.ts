@@ -1,5 +1,5 @@
 //
-//  string-compression.js
+//  string-compression.ts
 //  Leetcode
 //
 //  Created by Marc MOSCA on 04/11/2024.

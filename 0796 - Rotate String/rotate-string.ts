@@ -1,5 +1,5 @@
 //
-//  rotate-string.js
+//  rotate-string.ts
 //  Leetcode
 //
 //  Created by Marc MOSCA on 03/11/2024.
