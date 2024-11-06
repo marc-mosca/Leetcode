@@ -6,21 +6,21 @@
 //
 
 function shift(source: string): string {
-  return source.slice(1, source.length).concat(source.charAt(0));
+    return source.slice(1, source.length).concat(source.charAt(0));
 }
 
 function rotateString(s: string, goal: string): boolean {
-  if (s === goal) {
-    return true;
-  }
-
-  let source: string = shift(s);
-  while (source !== s) {
-    if (source === goal) {
-      return true;
+    if (s === goal) {
+        return true;
     }
-    source = shift(source);
-  }
 
-  return false;
+    let source: string = shift(s);
+    while (source !== s) {
+        if (source === goal) {
+            return true;
+        }
+        source = shift(source);
+    }
+
+    return false;
 }
