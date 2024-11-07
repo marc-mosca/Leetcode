@@ -5,22 +5,23 @@
 //  Created by Marc MOSCA on 03/11/2024.
 //
 
-function shift(source: string): string {
+function shift(source: string): string
+{
     return source.slice(1, source.length).concat(source.charAt(0));
 }
 
-function rotateString(s: string, goal: string): boolean {
-    if (s === goal) {
-        return true;
+function rotateString(s: string, goal: string): boolean
+{
+    if (s === goal)
+    {
+        return (true);
     }
-
-    let source: string = shift(s);
-    while (source !== s) {
-        if (source === goal) {
-            return true;
+    for (let source: string = shift(s); source !== s; source = shift(s))
+    {
+        if (source === goal)
+        {
+            return (true);
         }
-        source = shift(source);
     }
-
-    return false;
+    return (false);
 }

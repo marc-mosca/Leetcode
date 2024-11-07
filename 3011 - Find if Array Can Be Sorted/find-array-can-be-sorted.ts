@@ -5,41 +5,34 @@
 //  Created by Marc MOSCA on 06/11/2024.
 //
 
-function countBits(num: number): number {
-    let count: number = 0
-
-    for (; num > 0; num >>= 1) {
-        count += num & 1
-    }
-
-    return count
+function countBits(num: number): number
+{
+    return num.toString(2).match(/1/g).length;
 }
 
-function canSortArray(nums: number[]): boolean {
-    let maximum: number = nums[0]
-    let minimum: number = nums[0]
-    let previous: number = countBits(nums[0])
-    let previousMaximum: number | undefined = undefined
+function canSortArray(nums: number[]): boolean
+{
+    let currentMinimum: number = nums[0];
+    let currentMaximum: number = nums[0];
+    let previousMaximum: number = Number.NEGATIVE_INFINITY;
 
-    for (let i: number = 1; i < nums.length; i++) {
-        const current: number = countBits(nums[i])
-
-        if (current !== previous) {
-            if (previousMaximum !== undefined && previousMaximum > minimum) {
-                return false
+    for (let i: number = 0; i < nums.length; i++)
+    {
+        if (countBits(nums[i]) === countBits(currentMinimum))
+        {
+            currentMinimum = Math.min(currentMinimum, nums[i]);
+            currentMaximum = Math.max(currentMaximum, nums[i]);
+        }
+        else
+        {
+            if (currentMinimum < previousMaximum)
+            {
+                return (false);
             }
-
-            previousMaximum = maximum;
-            maximum = nums[i]
-            minimum = nums[i]
+            previousMaximum = currentMaximum;
+            currentMinimum = nums[i];
+            currentMaximum = nums[i];
         }
-        else {
-            maximum = Math.max(maximum, nums[i])
-            minimum = Math.min(minimum, nums[i])
-        }
-
-        previous = current
     }
-
-    return previousMaximum === undefined || previousMaximum <= minimum
+    return (currentMinimum > previousMaximum);
 }
