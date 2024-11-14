@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Solution {
+final class RotateStringSolution {
     
     /// Checks if a string can be rotated to match a target string.
     ///
