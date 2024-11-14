@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MostBeautifulItemForEachQuerySolution {
+final class MostBeautifulItemForEachQuerySolution {
     
     /// Performs a binary search on a sorted list of items to find the maximum "beauty" within a price limit.
     ///
