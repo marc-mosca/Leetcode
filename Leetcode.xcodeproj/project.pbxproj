@@ -20,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		015AA2F42CE636EF00063305 /* Leetcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Leetcode; sourceTree = BUILT_PRODUCTS_DIR; };
+		015AA30A2CE63A5D00063305 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -44,6 +45,7 @@
 		015AA2EB2CE636EF00063305 = {
 			isa = PBXGroup;
 			children = (
+				015AA30A2CE63A5D00063305 /* README.md */,
 				015AA2F62CE636EF00063305 /* Leetcode */,
 				015AA2F52CE636EF00063305 /* Products */,
 			);
