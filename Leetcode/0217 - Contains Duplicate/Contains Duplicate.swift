@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ContainsDuplicateSolution {
+final class ContainsDuplicateSolution {
     
     /// Determines if an array contains any duplicate values.
     ///
