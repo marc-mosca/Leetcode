@@ -7,5 +7,7 @@
 
 import Foundation
 
-print("Hello, World!")
+final class Solution {
+}
 
+print("Hello, World!")

@@ -8,8 +8,6 @@ My answers to Leetcode problems.
 </pre>
 </div>
 
-![Leetcode Stats](https://leetcard.jacoblin.cool/marc-mosca?theme=nord&font=patrick_hand)
-
 ## Features
 
 This repository contains my answers to Leetcode problems.
