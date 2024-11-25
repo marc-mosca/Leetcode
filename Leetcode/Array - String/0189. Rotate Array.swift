@@ -34,7 +34,7 @@ import Foundation
 extension Solution {
     
     func rotate(_ nums: inout [Int], _ k: Int) {
-        for i in 0 ..< k {
+        for _ in 0 ..< k {
             let deleted: Int = nums.removeLast()
             
             nums.insert(deleted, at: 0)
